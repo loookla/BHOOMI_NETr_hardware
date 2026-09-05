@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "author": "Parth Shukla",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-breadboard",
+      "id": "bb1",
+      "top": -100,
+      "left": -100,
+      "rotate": 0,
+      "attrs": {}
+    },
+    {
+      "type": "board-esp32-s3-devkitc-1",
+      "id": "esp",
+      "top": -80,
+      "left": 420,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mpu6050",
+      "id": "imu1",
+      "top": -170,
+      "left": 80,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": 180,
+      "left": 80,
+      "attrs": {}
+    }
+  ],
+
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+
+    [ "esp:3V3.1", "bb1:tp.1", "red", [] ],
+    [ "esp:GND.1", "bb1:tn.1", "black", [] ],
+
+    [ "esp:5V", "bb1:bp.1", "red", [] ],
+    [ "esp:GND.1", "bb1:bn.1", "black", [] ],
+
+    [ "imu1:VCC", "bb1:tp.10", "red", [] ],
+    [ "imu1:GND", "bb1:tn.10", "black", [] ],
+
+    [ "imu1:SDA", "bb1:10t.a", "green", [] ],
+    [ "esp:8", "bb1:10t.a", "green", [] ],
+
+    [ "imu1:SCL", "bb1:11t.a", "green", [] ],
+    [ "esp:9", "bb1:11t.a", "green", [] ],
+
+    [ "ultrasonic1:VCC", "bb1:bp.20", "red", [] ],
+    [ "ultrasonic1:GND", "bb1:bn.20", "black", [] ],
+
+    [ "ultrasonic1:TRIG", "bb1:20b.a", "green", [] ],
+    [ "esp:5", "bb1:20b.a", "green", [] ],
+
+    [ "ultrasonic1:ECHO", "bb1:25b.a", "green", [] ],
+    [ "esp:6", "bb1:25b.a", "green", [] ]
+  ],
+
+  "dependencies": {}
+}
