@@ -73,7 +73,7 @@ const char* SUPABASE_ENDPOINT =
     "https://bnnrikqlhvcqpuqsujsf.supabase.co/functions/v1/sensor-data";
 
 const char* SUPABASE_ANON_KEY =
-    "YOUR_SUPABASE_ANON_KEY";
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJubnJpa3FsaHZjcXB1cXN1anNmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg1ODc4OTAsImV4cCI6MjEwNDE2Mzg5MH0.sUK2HXu-_2u6AaEdNiyaVb9HXS_Or1pVB58rUReYGdI";
 
 
 // ============================================================
